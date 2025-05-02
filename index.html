@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Virtual Plant Grower</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="auth">
+    <input type="email" id="email" placeholder="Email">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="login()">Login</button>
+    <button onclick="signup()">Sign Up</button>
+  </div>
+  <h1>🌱 Virtual Plant Grower</h1>
+  <img id="plant" src="images/seed.png" alt="Plant" />
+  <div>
+    <button onclick="waterPlant()">💧 Water</button>
+    <button onclick="addNewPlant()">➕ Add Plant</button>
+    <button onclick="switchPlant()">🔄 Switch Plant</button>
+  </div>
+  <div class="rain" id="rain-container"></div>
+  <audio id="water-sound" src="sounds/water.mp3" preload="auto"></audio>
+  <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-database.js"></script>
+  <script src="firebase-config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
